@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> KIDNEY STONE PREDICTION</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+<style>
+*{
+<!--text-align:center;-->
+}
+body{
+display:flex;
+width:100vw;
+height:100vh;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+}
+.head{
+width:80%;
+margin-bottom:50px;
+margin-top:20px;
+}
+.sd{
+width:80%;
+border:5px solid black;
+padding:10px;
+}
+h1{
+color: crimson;
+margin:10px 10px;
+}
+
+</style>
+
+</head>
+<body class="row">
+
+<div class="head">
+<header class="bg-success text-white" style="padding:20px; font-size:33px; text-align:center;">
+
+    <h1 behavior="" direction="">KIDNEY STONE PREDICTION</h1>
+
+</header>
+</div>
+<div class="sd">
+    <h4><i>Upload Image</i> </h4>
+    <form name="f1" action="/" enctype="multipart/form-data" method="post">
+        <table class="table">
+
+            <tr>
+                <td>
+                    <input type="file" name="img" placeholder="alzheimer" required/>
+                </td>
+            </tr>
+
+        </table>
+        <input type="submit" value="Detect" class="btn btn-primary"/>
+
+    </form>
+
+</div>
+<br>
+<span>
+     {% if res %}
+    <h2><center>kidney stone is {{ res}}</center></h2>
+     {% endif %}
+</span>
+
+
+
+
+</body>
+</html>
